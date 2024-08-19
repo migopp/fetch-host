@@ -7,19 +7,21 @@ import (
 	"github.com/migopp/fetch-host/pkg/setup"
 )
 
-func GetConfigData(configPath string) (setup.Config, error) {
+func GetConfigData(configPath string, configChan chan<- setup.Config, errChan chan<- error) {
 	// get file contents
 	configFile, err := os.ReadFile(configPath)
 	if err != nil {
-		return setup.Config{}, err
+		errChan <- err
+		return
 	}
 
 	// unmarshall data
 	var config setup.Config
 	err = json.Unmarshal(configFile, &config)
 	if err != nil {
-		return setup.Config{}, err
+		errChan <- err
+		return
 	}
 
-	return config, nil
+	configChan <- config
 }
