@@ -26,10 +26,11 @@ This should install the binary to your `~/go/bin`. Add this directory to your `P
 
 You can config the resulting SSH command in `~/.config/fetch-host/config.json`.
 
+A base configuration might be:
+
 ```json
-// config.json
 {
-  "utcsUsername": "<utcs user>",
+  "utcsUsername": "migopp",
   "sshTemplate": "ssh %s@%s.cs.utexas.edu"
 }
 ```
