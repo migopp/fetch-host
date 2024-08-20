@@ -7,7 +7,7 @@ import (
 
 func GetBest(hosts []Host) (string, error) {
 	// filter down hosts
-	var upHosts []Host
+	upHosts := make([]Host, len(hosts))
 	for _, host := range hosts {
 		if host.status {
 			upHosts = append(upHosts, host)
