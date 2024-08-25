@@ -8,9 +8,9 @@ import (
 func GetBest(hosts []Host) (string, error) {
 	// filter down hosts
 	upHosts := make([]Host, len(hosts))
-	for _, host := range hosts {
+	for i, host := range hosts {
 		if host.status {
-			upHosts = append(upHosts, host)
+			upHosts[i] = host
 		}
 	}
 	if len(upHosts) == 0 {
