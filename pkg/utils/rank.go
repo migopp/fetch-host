@@ -7,10 +7,10 @@ import (
 
 func GetBest(hosts []Host) (string, error) {
 	// filter down hosts
-	upHosts := make([]Host, len(hosts))
-	for i, host := range hosts {
+	var upHosts []Host
+	for _, host := range hosts {
 		if host.status {
-			upHosts[i] = host
+			upHosts = append(upHosts, host)
 		}
 	}
 	if len(upHosts) == 0 {

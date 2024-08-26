@@ -22,6 +22,10 @@ cd fetch-host/cmd/fetch-host/ && go install
 
 This should install the binary to your `~/go/bin`. Add this directory to your `PATH` if it's not already there.
 
+```
+export PATH=$PATH:~/go/bin
+```
+
 ## Configuration
 
 You can config the resulting SSH command in `~/.config/fetch-host/config.json`.
@@ -45,4 +49,12 @@ If a config file doesn't exist when `fetch-host` executes, then it will generate
 fetch-host
 ```
 
-The resulting command with the optimal host will be copied to your clipboard.
+The resulting command with the optimal host will be printed to the console.
+
+### Instant SSH
+
+You can set an alias in your shell profile for a fast ssh, if desired.
+
+```
+alias fssh=$(fetch-host)
+```

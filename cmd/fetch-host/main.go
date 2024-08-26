@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"golang.design/x/clipboard"
 	"log"
 
 	"github.com/migopp/fetch-host/pkg/setup"
@@ -51,11 +50,7 @@ func main() {
 	case config := <-configChan:
 		// format + output cmd
 		cmd := fmt.Sprintf(config.SshTemplate, config.UtcsUsername, best)
-		err = clipboard.Init()
-		if err != nil {
-			log.Fatal("Error creating clipboard:", err)
-		}
-		clipboard.Write(clipboard.FmtText, []byte(cmd))
+		fmt.Println(cmd)
 	case err = <-errChan:
 		log.Fatal("Error fetching config data:", err)
 	}

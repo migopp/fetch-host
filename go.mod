@@ -2,10 +2,7 @@ module github.com/migopp/fetch-host
 
 go 1.23.0
 
-require (
-	github.com/gocolly/colly v1.2.0
-	golang.design/x/clipboard v0.7.0
-)
+require github.com/gocolly/colly v1.2.0
 
 require (
 	github.com/PuerkitoBio/goquery v1.9.2 // indirect
@@ -21,11 +18,7 @@ require (
 	github.com/saintfish/chardet v0.0.0-20230101081208-5e3ef4b5456d // indirect
 	github.com/stretchr/testify v1.4.0 // indirect
 	github.com/temoto/robotstxt v1.1.2 // indirect
-	golang.org/x/exp v0.0.0-20190731235908-ec7cb31e5a56 // indirect
-	golang.org/x/image v0.6.0 // indirect
-	golang.org/x/mobile v0.0.0-20230301163155-e0f57694e12c // indirect
 	golang.org/x/net v0.28.0 // indirect
-	golang.org/x/sys v0.23.0 // indirect
 	golang.org/x/text v0.17.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
 	google.golang.org/protobuf v1.34.2 // indirect
