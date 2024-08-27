@@ -56,5 +56,5 @@ The resulting command with the optimal host will be printed to the console.
 You can set an alias in your shell profile for a fast ssh, if desired.
 
 ```
-alias fssh=$(fetch-host)
+alias fssh="$(fetch-host)"
 ```
